@@ -1,4 +1,4 @@
-package br.com.alura.gerenciador.servlet;
+package br.com.alura.gerenciador.modelo;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -11,6 +11,7 @@ public class Banco {
 	private static List<Empresa> lista = new ArrayList<Empresa>();
 	private static Integer chaveSequencial = 1;
 	
+	//Simulando um Banco de Dados Provisóriamente
 	static {
 		Empresa empresa = new Empresa();
 		empresa.setId(chaveSequencial++);
@@ -50,6 +51,7 @@ public class Banco {
 	}
 
 	public Empresa buscaEmpresaPelaId(Integer id) {
+		
 		for (Empresa empresa : lista) {
 			if(empresa.getId() == id) {
 				return empresa;
