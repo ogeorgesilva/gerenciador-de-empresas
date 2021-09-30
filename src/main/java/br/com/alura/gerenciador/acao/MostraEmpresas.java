@@ -2,7 +2,6 @@ package br.com.alura.gerenciador.acao;
 
 import java.io.IOException;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -10,9 +9,9 @@ import javax.servlet.http.HttpServletResponse;
 import br.com.alura.gerenciador.modelo.Banco;
 import br.com.alura.gerenciador.modelo.Empresa;
 
-public class MostraEmpresas {
+public class MostraEmpresas implements Acao {
 	
-	public void executa(HttpServletRequest request, HttpServletResponse response) 
+	public String executa(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
 		
 		System.out.println("Exibindo dados das Empresas");
@@ -24,8 +23,8 @@ public class MostraEmpresas {
 		Empresa empresa = banco.buscaEmpresaPelaId(id);
 		
 		request.setAttribute("empresa", empresa);
-		RequestDispatcher rd = request.getRequestDispatcher("/formAlteraEmpresa.jsp");
-		rd.forward(request, response);
+
+		return "forward:formAlteraEmpresa.jsp";
 		
 	}
 	

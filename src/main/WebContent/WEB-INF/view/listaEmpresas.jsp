@@ -25,13 +25,13 @@
 			<li>
 				${empresa.nome} -
 				<fmt:formatDate value="${empresa.dataAbertura}" pattern="dd/MM/yyyy" />
-				<a href="/gerenciador/entrada?acao=MostraEmpresa&id=${empresa.id}">editar</a>
+				<a href="/gerenciador/entrada?acao=MostraEmpresas&id=${empresa.id}">editar</a>
 				<a href="/gerenciador/entrada?acao=RemoveEmpresa&id=${empresa.id}">remover</a>
 			</li>
 		</c:forEach>
 	</ul>
 	
-	<form action="/gerenciador/formNovaEmpresa.jsp">
+	<form method="post" action="/gerenciador/entrada?acao=NovaEmpresaForm">
 		<button type="submit">
 			Cadastrar Nova Empresa
 		</button>
