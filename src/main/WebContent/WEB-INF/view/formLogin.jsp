@@ -8,12 +8,11 @@
 <title>Cadastro Nova Empresa</title>
 </head>
 <body>
-	<c:import url="logout-parcial.jsp" />
-
 	<form action="${linkEntradaServlet}" method="post">
-		Nome: <input type="text" name="nome" />
-		Data de Abertura: <input type="text" name="data" />
-		<input type="hidden" name="acao" value="NovaEmpresa" />
+		Login: <input type="text" name="login" />
+		 <br><br>
+		Senha: <input type="password" name="senha" />
+		<input type="hidden" name="acao" value="Login" />
 		<input type="submit" />
 	</form>
 </body>
