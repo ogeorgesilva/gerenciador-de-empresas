@@ -29,11 +29,11 @@ public class Banco {
 		
 		Usuario u1 = new Usuario();
 		u1.setLogin("George");
-		u1.setSenha("12345");
+		u1.setSenha("102030");
 		
 		Usuario u2 = new Usuario();
 		u2.setLogin("Thone");
-		u2.setSenha("54321");
+		u2.setSenha("010203");
 		
 		listaUsuarios.add(u1);
 		listaUsuarios.add(u2);
